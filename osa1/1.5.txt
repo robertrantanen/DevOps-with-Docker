@@ -1,0 +1,14 @@
+First start the image with:
+
+docker run -it --name test ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Then when the input is waiting go to another window and install curl:
+
+docker exec test apt-get update
+
+docker exec test apt-get install -y curl
+
+
+Then input helsinki.fi and it works
+
+
