@@ -1,0 +1,8 @@
+First build the image with:
+
+docker build -t curler .
+
+Then run it with:
+
+docker run -it curler
+

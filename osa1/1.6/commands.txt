@@ -1,0 +1,7 @@
+Build the image with:
+
+docker build -t docker-clock .
+
+Then run it with:
+
+docker run docker-clock
