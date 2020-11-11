@@ -1,0 +1,8 @@
+First build the image:
+
+docker build -t front .
+
+Then run it with:
+
+docker run -p 5000:5000 front
+

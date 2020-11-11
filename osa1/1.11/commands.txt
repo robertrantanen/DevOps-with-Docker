@@ -1,0 +1,14 @@
+First build the image with:
+
+docker build -t back .
+
+If logs.txt doesn't exist create it with:
+
+touch logs.txt
+
+Then run the image with:
+
+docker run -p 8000:8000 -v $(pwd)/logs.txt:/logs.txt back
+
+
+Then visit site localhost:8000
