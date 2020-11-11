@@ -1,0 +1,17 @@
+First build and run backend:
+
+docker build -t back .
+
+touch logs.txt (if it doesn't exist)
+
+docker run -p 8000:8000 -v $(pwd)/logs.txt:/logs.txt back
+
+
+Then build and run frontend:
+
+docker build -t front .
+
+docker run -p 5000:5000 front
+
+
+Then navigate to localhost:5000 and press the exercise 1.12 button.
