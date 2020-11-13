@@ -1,0 +1,10 @@
+First build the image with:
+
+docker build -t spring .
+
+Then run it with:
+
+docker run -p 8080:8080 spring
+
+
+Then open localhost:8080 in your browser.

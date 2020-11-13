@@ -1,0 +1,10 @@
+First build the image with:
+
+docker build -t ruby .
+
+Then run it with:
+
+docker run -p 3000:3000 ruby
+
+
+The command line doesn't say anything, but you can access the application in localhost:3000
