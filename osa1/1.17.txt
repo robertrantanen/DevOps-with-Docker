@@ -1,0 +1,9 @@
+Docker hub link:
+
+https://hub.docker.com/r/rantro/somepython
+
+It's a Python image that installs all kinds of stuff with pip. The image also installs Oracle which is totally my favorite database. You can shell inside the container with:
+
+docker run -it rantro/somepython
+
+Then you can create new python files etc, or write "python3" to shell inside python.

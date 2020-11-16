@@ -1,0 +1,7 @@
+Docker hub repo:
+
+https://hub.docker.com/r/rantro/ristinolla
+
+Run it with:
+
+docker run -it rantro/ristinolla
