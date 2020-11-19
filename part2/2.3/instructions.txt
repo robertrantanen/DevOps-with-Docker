@@ -1,0 +1,1 @@
+First, make sure that docker-compose.yml, frontend-example and backend-example are in the same folder.   Frontend and backend folders should also include their correct dockerfiles. Then run "docker-compose up". Wait a bit then open localhost:5000.
