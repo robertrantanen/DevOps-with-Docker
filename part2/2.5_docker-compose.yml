@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+
+  redis:
+    image: "redis:6"
+    expose:
+      - 6379
+
+  backend:
+    build: ./backend-example-docker
+    ports:
+      - 8000:8000
+    environment:
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+      - REDIS_PORT=6379
+
+  frontend:
+    build: ./frontend-example-docker
+    ports:
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost:8000

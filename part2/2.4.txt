@@ -1,0 +1,5 @@
+Run command:
+
+docker-compose up --scale compute=3
+
+Then open localhost:3000
