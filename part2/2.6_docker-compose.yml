@@ -1,0 +1,45 @@
+version: '3.5'
+
+services:
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - database:/var/lib/postgresql/data
+
+  redis:
+    image: "redis:6"
+    expose:
+      - 6379
+
+  backend:
+    build: ./backend-example-docker
+    ports:
+      - 8000:8000
+    environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_NAME=postgres
+      - DB_HOST=db
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend-example-docker
+    ports:
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost:8000
+
+volumes:
+  database:
