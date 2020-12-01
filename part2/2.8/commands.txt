@@ -1,0 +1,1 @@
+nginx.conf must be in the same folder as docker-compose.yml.
