@@ -1,0 +1,5 @@
+I only had to change two things in docker-compose.yml:
+
+FRONT_URL=http://localhost:80/ in backend-service
+
+API_URL=http://localhost:80/api in frontend-service
