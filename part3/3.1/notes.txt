@@ -1,0 +1,7 @@
+Back in part 1 I already used FROM node:10.23 images.
+
+Back was 929MB and front was 1.12GB.
+
+Now I used FROM node:10.23-slim images and got
+
+back=153MB and front=348MB.
