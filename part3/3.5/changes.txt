@@ -1,0 +1,6 @@
+Back in part 1 I already used FROM node:10.23 images.
+In exercise 3.1 I used FROM node:10.23-slim images.
+back was 153MB and front was 348MB.
+
+Now I used FROM node:10.23-alpine images instead and got
+back=102MB and front=297MB.
