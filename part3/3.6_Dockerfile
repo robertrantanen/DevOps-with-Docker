@@ -1,0 +1,22 @@
+FROM node:10.23-alpine as build
+
+WORKDIR /app
+
+COPY . /app
+
+RUN npm install && npm run build
+
+
+FROM node:10.23-alpine
+
+COPY --from=build ./app/dist/ ./app/dist/
+
+WORKDIR /app
+
+RUN npm install && npm install -g serve && adduser -D app && chown -R app: /app
+
+ENV API_URL=http://localhost:8000
+
+USER app
+
+CMD ["serve", "-s", "-l", "5000", "dist"]
