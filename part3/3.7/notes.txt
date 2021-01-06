@@ -1,0 +1,5 @@
+I used the exercise 1.13 Dockerfile.
+
+Size before changes: 599MB. After: 190MB.
+
+I turned the image into Alpine and made the application run as a non-root user.
